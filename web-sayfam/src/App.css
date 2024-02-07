@@ -1,0 +1,50 @@
+.App {
+  align-items: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(8px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.CommonThings {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header {
+  background: linear-gradient(to right, #4731D3 70%, #CBF281 30%);
+}
+
+.Skills {
+ 
+  background-color: rgb(255, 255, 255);
+  color: 
+  #777777;
+ 
+
+
+}
+
+.Skills > p {
+  font-size: 24px;
+}
+
+.Profile {
+  background-color: #4731D3;
+}
+
+.Projects {
+  background-color: #CBF281;
+}
+
+.Footer {
+  background-color: rgb(253, 253, 252);
+
+
+}
