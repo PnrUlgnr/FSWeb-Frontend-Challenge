@@ -2,12 +2,20 @@ import "../App.css";
 import headerImg from "../assests/header.svg";
 import { toast } from "react-toastify";
 
+//import { useSelector, useDispatch } from 'react-redux';
+//import { toggleDarkMode } from 'pathToYourActionsFile';
+
 //const navigateToGithub = () => {
 //window.location.href =
 //   "https://github.com/PnrUlgnr?tab=overview&from=2024-01-01&to=2024-01-31";
 //};
 
 export default function Header() {
+  //const dispatch = useDispatch();
+  //const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
+  //const handleToggleDarkMode = () => {
+  //dispatch(toggleDarkMode());
   const navigateToGithub = () => {
     toast.info("Yönlendiriliyorsunuz...", {
       position: "top-center",
@@ -28,7 +36,8 @@ export default function Header() {
       },
     });
   };
-
+  //className={`Header CommonThings ${isDarkMode ? 'dark-mode' : ''}`}>
+  //header className="Header CommonThings"
   return (
     <header className="Header CommonThings">
       <div className="w-3/5 flex">

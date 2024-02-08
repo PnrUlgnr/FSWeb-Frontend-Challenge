@@ -29,6 +29,7 @@ export default function Skills() {
         <div className="text-[#4832D3] text-[48px] font-bold mb-10 md:mb-0">
           Skills
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             {firstColumnSkills.map((skill, index) => (

@@ -1,7 +1,10 @@
 // store.js
-import { createStore } from "redux";
-import darkModeReducer from "./reducers/darkModeReducer";
+import { legacy_createStore as createStore } from "redux";
+import { combineReducers } from "redux";
+import { themeReducer } from "./reducers/themeReducer";
 
-const store = createStore(darkModeReducer);
+const rootReducer = combineReducers({
+  theme: themeReducer,
+});
 
-export default store;
+export const store = createStore(rootReducer);

@@ -1,9 +1,8 @@
-// reducers/darkModeReducer.js
 const initialState = {
   isDarkMode: false,
 };
 
-const darkModeReducer = (state = initialState, action) => {
+export const themeReducer = (state = initialState, action) => {
   switch (action.type) {
     case "TOGGLE_DARK_MODE":
       return {
@@ -14,5 +13,3 @@ const darkModeReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default darkModeReducer;

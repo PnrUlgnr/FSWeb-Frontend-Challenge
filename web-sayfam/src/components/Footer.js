@@ -32,16 +32,27 @@ const Footer = () => {
     },
   ];
 
+  //"text-[#4731D3] font-inter text-4xl-custom font-bold leading-none tracking-normal text-left text-custom-purple  "
   return (
-    <footer className="flex justify-center space-x-4">
+    <footer className=" flex justify-center space-x-4 ">
       <div className="w-3/5 flex-wrap">
-        <h1 className="font-inter text-4xl-custom font-bold leading-none tracking-normal text-left text-custom-purple">
+        <h1 className="font-bold text-[32px] text-[#4731D3]">
           Send me a message!
         </h1>
-        <p className="text-[24px] font-normal">
+        <p
+          className=" text-[#120B39] text-[24px] w-100 h-18 ;
+font-normal"
+        >
           Got a question or proposal, or just want to say hello? Go ahead.
         </p>
-        <p className="text-[24px] font-normal">almilasucode@gmail.com </p>
+        //
+        <a
+          href="mailto:almilasucode@gmail.com"
+          class="underline text-[#4731D3]"
+        >
+          almilasucode@gmail.com
+        </a>
+        <p className="text-[24px] font-normal ">almilasucode@gmail.com </p>
         {footerData.map((data, index) => (
           <div className="flex space-x-4">
             <div key={index} className="flex space-x-4">
