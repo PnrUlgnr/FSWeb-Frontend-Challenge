@@ -1,0 +1,38 @@
+{
+    "Header": {
+        "heading" : "I am a Frontend Developer..",
+        "description" : "...who likes to craft solid and scalable frontend products with great user experiences."
+    },
+
+    "Skills": {
+        "heading": "Skills"
+    },
+
+    "Profile": {
+        "heading": "Profile",
+        "basic_info": "Basic Information",
+       "birth_date": "Birth Date",
+       "residence": "Ankara",
+       "education": "Education",
+       "role":"Frontend, UI",
+       "about_me": "About me",
+       "about_me_more": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam"
+    },
+
+    "Projects": {
+        "heading": "Projecs",
+
+        "project1": "Workintech",
+        "project1_description": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+
+        "project2": "Journey",
+        "project2_description": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+
+        "viewSite": "View Site"
+    },
+
+    "Footer": {
+        "heading": "Send me a message!",
+        "description": "Got a question or proposal, or just want to say hello? Go ahead."
+    }
+}

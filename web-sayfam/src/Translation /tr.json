@@ -1,0 +1,37 @@
+{
+    "Header": {
+        "heading": "Ben bir Ön Uç Geliştiricisiyim..",
+        "description": "..mükemmel kullanıcı deneyimleriyle sağlam ve ölçeklenebilir ön uç ürünleri oluşturmayı seven."
+    },
+
+    "Skills": {
+        "heading": "Beceriler"
+    },
+
+    "Profile": {
+        "heading": "Profil",
+        "basic_info": "Temel Bilgiler",
+       "birth_date": "Doğum Tarihi",
+       "residence": "Ankara",
+       "education": "Eğitim",
+       "role":"Ön uç, UI",
+       "about_me": "Hakkımda",
+       "about_me_more": "Müşterinin kendisi, müşterinin şirketin adipisliğini takip edebilecektir. Gelsin ya da olmasın, emeğin yumuşaklığı dışında her türlü zevkinden nefret eder.En az şarjı keyifle açalım mı? Zaman ne kadar güzel olursa olsun bıraktıkları sözler"
+    },
+
+    "Projects": {
+        "heading": "Projeler",
+        "project1": "Workintech",
+        "project1_description": "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimal kurulum çerez eklentisi. Bu, vanilya JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu, kod ve temalarda her türlü özelleştirmeyi mümkün kılar.",
+
+        "project2": "Yolculuk",
+        "project2_description": "Kullanıcılarınızın hangi çerezleri kabul edeceğini veya reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimal kurulum çerez eklentisi. Bu, vanilya JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu, kod ve temalarda her türlü özelleştirmeyi mümkün kılar.",
+
+        "viewSite": "Siteye Git"
+    },
+
+    "Footer": {
+        "heading": "Bana bir mesaj gönder!",
+        "description": "Bir öneriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Devam edin."
+    }
+}

@@ -1,56 +1,72 @@
-import React, { useState } from "react";
-import "./App.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import data from "./data";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
+import "./App.css";
+import Projects from "./components/Projects";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Profile from "./components/Profile";
-import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import DarkMode from "./components/DarkMode";
-function App() {
-  const [language, setLanguage] = useState("tr"); // Varsayılan dil olarak Türkçe ayarlandı.
+import useThemePreference from "./hooks/useThemePreference";
+import dataENG from "./Translation /en.json";
+import dataTR from "./Translation /tr.json";
 
-  const handleChangeLanguage = (lang) => {
-    setLanguage(lang);
+function App() {
+  const [responseData, setResponseData] = useState(null);
+  const [language, setLanguage] = useState("english");
+
+  const prefersTheme = useThemePreference();
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || (prefersTheme ? "dark" : "light")
+  );
+
+  const toggleLanguage = () => {
+    setLanguage(language === "english" ? "turkish" : "english");
   };
 
-  const content = data[language]; // Seçilen dile göre içerik yüklenecek.
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+
+    document.documentElement.lang = language;
+    localStorage.setItem("language", language);
+
+    const selectedData = language === "english" ? dataENG : dataTR;
+
+    axios
+      .post("https://reqres.in/api/data", selectedData)
+      .then(function (response) {
+        console.log("RESPONSE:", response);
+        setResponseData(response.data);
+      })
+      .catch(function (error) {
+        console.error("API request error:", error);
+      });
+  }, [theme, language]);
+
+  const handleThemeSwitch = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
 
   return (
-    <div className="App">
-      <div>
-        <div className="flex ">
-          <button
-            className=" flex  fixed top-4 right-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => handleChangeLanguage("tr")}
-          >
-            TR-
-          </button>
-          <button
-            className=" flex disabled:first-line:  fixed top-4 right-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-1 rounded "
-            onClick={() => handleChangeLanguage("en")}
-          >
-            EN
-          </button>
-        </div>
-        {/* İçerik */}
-        <h1>{content.intro[0]}</h1>
-        <p>{content.intro[1]}</p>
-
-        {/* ... Diğer içerikler profile, projects gibi yine content üzerinden erişilerek render edilir ... */}
-
-        <Header />
-        <Skills />
-        <Profile />
-        <Projects />
-        <Footer />
-        <DarkMode />
-        <ToastContainer />
-      </div>
+    <div className={`App ${theme}`}>
+      <Header
+        theme={theme}
+        handleThemeSwitch={handleThemeSwitch}
+        language={language}
+        toggleLanguage={toggleLanguage}
+        data={language === "english" ? dataENG.Header : dataTR.Header}
+      />
+      <Skills data={language === "english" ? dataENG.Skills : dataTR.Skills} />
+      <Profile
+        data={language === "english" ? dataENG.Profile : dataTR.Profile}
+      />
+      <Projects
+        data={language === "english" ? dataENG.Projects : dataTR.Projects}
+      />
+      <Footer data={language === "english" ? dataENG.Footer : dataTR.Footer} />
     </div>
   );
 }
+
 export default App;
